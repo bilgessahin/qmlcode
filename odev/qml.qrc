@@ -1,0 +1,24 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>AnaMenu.qml</file>
+        <file>AnaMenuForm.ui.qml</file>
+        <file>images/arkaplan.png</file>
+        <file>FirstRow.qml</file>
+        <file>MyTextFile.qml</file>
+        <file>FirstColumn.qml</file>
+        <file>images/clock.png</file>
+        <file>images/clock2.png</file>
+        <file>SecondColumn.qml</file>
+        <file>RudderColumn.qml</file>
+        <file>MyProgressBar.qml</file>
+        <file>MyCircularGauge.qml</file>
+        <file>MyButton.qml</file>
+        <file>MyHalfCircularGauge.qml</file>
+        <file>MyTwoSideCircularGauge.qml</file>
+        <file>BowThrusterColumn.qml</file>
+        <file>NavLightsComponent.qml</file>
+        <file>TextRow.qml</file>
+        <file>Compass.qml</file>
+    </qresource>
+</RCC>
