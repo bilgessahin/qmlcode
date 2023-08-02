@@ -1,8 +1,6 @@
 <RCC>
     <qresource prefix="/">
         <file>main.qml</file>
-        <file>AnaMenu.qml</file>
-        <file>AnaMenuForm.ui.qml</file>
         <file>images/arkaplan.png</file>
         <file>FirstRow.qml</file>
         <file>MyTextFile.qml</file>
