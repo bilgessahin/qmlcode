@@ -6,7 +6,7 @@ RowLayout  {
     anchors.top: parent.top
     width: parent.width
     height: 50
-    spacing: 10
+    spacing: 5
 
 
     Rectangle{

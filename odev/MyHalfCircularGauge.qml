@@ -113,15 +113,15 @@ Item {
                 var ctx = getContext("2d");
                 ctx.clearRect(0, 0, width, height);
 
-                // Draw the top portion of the circle (120 degrees)
-                var startAngle = -Math.PI / 3; // Starting angle in radians (equivalent to -60 degrees)
-                var endAngle = Math.PI / 3; // Ending angle in radians (equivalent to 60 degrees)
+
+                var startAngle = -Math.PI / 3;
+                var endAngle = Math.PI / 3;
                 var radius = width / 2;
 
                 ctx.beginPath();
                 ctx.arc(width / 2, height / 2, radius, startAngle, endAngle, false);
-                ctx.lineWidth = 2; // Border thickness
-                ctx.strokeStyle = "black"; // Border color
+                ctx.lineWidth = 2;
+                ctx.strokeStyle = "black";
                 ctx.stroke();
             }
         }

@@ -23,12 +23,14 @@ Rectangle {
         font.pixelSize: 15
     }
     MyButton{
+        itemWidth: 150
         id: firstButton
         anchors.top: firstText.bottom
         buttonTextInfo: "True"
-        buttonColor: "#e35815"
+        buttonColor: "#dd4001"
     }
     MyButton{
+        itemWidth: 150
         anchors.top: firstButton.bottom
         buttonTextInfo: "Relative"
         buttonColor: "#ff8633"

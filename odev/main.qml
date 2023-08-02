@@ -7,7 +7,7 @@ ApplicationWindow {
     width: 1400
     height: 900
     visible: true
-    flags: Qt.Window | Qt.WindowMinimizeButtonHint | Qt.WindowMaximizeButtonHint | Qt.WindowCloseButtonHint
+    flags: Qt.Window | Qt.WindowMinimizeButtonHint  | Qt.WindowCloseButtonHint
 
     Rectangle {
         width: parent.width
@@ -107,7 +107,8 @@ ApplicationWindow {
         anchors.leftMargin: 30
         color: "black"
         width: 3
-        height: parent.height - rudderColumn.height
+        height: parent.height - (firstRow.height + firstColumn.height
+                                 + (parent.height - bottomLine.y))
     }
 
     NavLightsComponent{
@@ -229,16 +230,17 @@ ApplicationWindow {
     }
 
     MyTwoSideCircularGauge{
+        id: leftbottomcircle
         anchors.top: secondCircularGauge.bottom
         anchors.topMargin: 50
         anchors.leftMargin: 30
         anchors.right: verticalRec2.left
-        anchors.rightMargin: 30
+        anchors.rightMargin: 20
 
-        bottomText: "RATE OF\n TURN"
-        minVal: -250
-        maxVal: 250
-        stepSize: 50
+        bottomText: "RUDDER\n ANGLE"
+        minVal: -50
+        maxVal: 50
+        stepSize: 10
         bottomRecVisible: false
         textX: 50
         textY: 135
@@ -248,10 +250,10 @@ ApplicationWindow {
         id: verticalRec2
         anchors.top: firstColumn.bottom
         anchors.left: halfCircGauge2.left
-        anchors.leftMargin: 265
+        anchors.leftMargin: 275
         color: "black"
         width: 3
-        height: parent.height - rudderColumn.height
+        height: parent.height - (firstRow.height + firstColumn.height)
     }
 
     TextRow{
@@ -270,5 +272,31 @@ ApplicationWindow {
         color: "black"
     }
 
+    Compass{
+        id: compass
+        anchors.top: myCircularGauge.bottom
+        anchors.topMargin: 20
+        anchors.left: firstCircularGauge.right
+        anchors.leftMargin: 65
+    }
 
+    StatusComponent{
+        anchors.top: compass.bottom
+        anchors.topMargin: 30
+        anchors.left: firstCircularGauge.right
+        anchors.leftMargin: 170
+    }
+
+    Rectangle{
+        id: bottomLine
+        x: 0
+        y: 844
+        width: verticalRec2.x
+        height: 2
+        color: "black"
+    }
+
+    LastRow{
+        anchors.top: bottomLine.bottom
+    }
 }

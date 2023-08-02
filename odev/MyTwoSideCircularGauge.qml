@@ -22,6 +22,12 @@ Rectangle {
     property var textX: circularText.x
     property var textY: circularText.y
 
+    Connections {
+        target: velocityController
+        onVelocityChanged: {
+            circularGaugeComponent.value = velocityController.velocity()
+        }
+    }
 
     Rectangle {
         id: firstRec
@@ -58,7 +64,7 @@ Rectangle {
         anchors.horizontalCenter: firstRec.horizontalCenter
         minimumValue: minVal
         maximumValue: maxVal
-        value: 0
+        value: velocityController.velocity()
 
         width: 150
         height: 150
@@ -125,5 +131,9 @@ Rectangle {
         color: "#444343"
         border.width: 1
         border.color: "black"
+        MouseArea{
+            anchors.fill: parent
+            onClicked: velocityController.setVelocity(200)
+        }
     }
 }

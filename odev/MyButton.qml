@@ -1,11 +1,13 @@
 import QtQuick 2.0
 
 Item {
-    width: 150
+    id: baseComponent
+    width: itemWidth
     height: 40
 
     property var buttonTextInfo: buttonText.text
     property var buttonColor: colorRec.color
+    property var itemWidth: baseComponent.width
 
     Item {
         id: firstItem
